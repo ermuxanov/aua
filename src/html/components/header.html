@@ -1,39 +1,69 @@
 <header class="header">
   <div class="header__inner">
-    <div class="header__logo">@@include('../components/logo.html')</div>
-    <div class="header__mid">
-      @@include('../shared/contacts.html')
-      <div class="header__menu">
-        <div class="header__menu-svg">
-          @@include('../shared/circle-text.html')
+    <div class="header__block">
+      <div class="header__logo">@@include('../shared/logo.html')</div>
+      <div class="header__right dropdown-anim" data-pl="30">
+        <!-- <div class="header__nav-dropdown-bg"></div> -->
+        <div class="header__right-inner">
+          <div class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item dropdown open">
+                <div class="header__nav-item-main">
+                  <p>О компании</p>
+                  <span> @@include('../shared/arrow.html') </span>
+                </div>
+              </li>
+              <li class="header__nav-item dropdown">
+                <div class="header__nav-item-main">
+                  <p>Услуги</p>
+                  <span> @@include('../shared/arrow.html') </span>
+                </div>
+              </li>
+              <li class="header__nav-item"><a href="#">Новости</a></li>
+              <li class="header__nav-item"><a href="#">Вакансии</a></li>
+              <li class="header__nav-item"><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <a class="header__phone" href="tel:998555069999">
+            <span class="header__search-svg">@@include('../shared/phone.html')</span>
+            <span class="header__phone-num">+99855 506 99 99</span>
+          </a>
+          <div class="header__search">
+            <div class="header__search-svg">@@include('../shared/search.html')</div>
+          </div>
+          <div class="header__lang">
+            <span class="header__lang-selected">РУ</span>
+            <div class="header__lang-dropdown">
+              <div class="header__lang-dropdown-items">
+                <div class="header__lang-dropdown-svg">@@include('../shared/triangle.html')</div>
+                <span class="header__lang-dropdown-item">РУ</span>
+                <span class="header__lang-dropdown-item">UZ</span>
+                <span class="header__lang-dropdown-item">EN</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="header__menu-burger">
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="header__lang">
-        <a>РУ @@include('../shared/lang-decor.html')</a>
-        <a>O`Z @@include('../shared/lang-decor.html')</a>
-        <a>EN @@include('../shared/lang-decor.html')</a>
+        <ul class="header__nav-dropdown">
+          <div class="header__nav-dropdown-items">
+            <li class="header__nav-dropdown-item"><a href="#">Информация о компании</a></li>
+            <li class="header__nav-dropdown-item"><a href="#">Наш флот</a></li>
+            <li class="header__nav-dropdown-item"><a href="#">Питание на борту</a></li>
+            <li class="header__nav-dropdown-item"><a href="#">Карта полетов</a></li>
+          </div>
+          <div class="header__nav-dropdown-items">
+            <li class="header__nav-dropdown-item">
+              <a href="#">Услуги кооторые предоставляет Asia Union Airlines</a>
+            </li>
+            <li class="header__nav-dropdown-item"><a href="#">Тарифы</a></li>
+            <li class="header__nav-dropdown-item"><a href="#">Багаж</a></li>
+            <li class="header__nav-dropdown-item"><a href="#">Перевозка животных</a></li>
+          </div>
+        </ul>
       </div>
     </div>
-    <a href="tel:998977766692" class="header__phone">+998 (97) 776-66-92</a>
-  </div>
-  <div class="menu">
-    <div class="menu__list">
-      <div class="menu__list-item"><span>БАРБЕРШОП</span> @@include('../shared/marque.html',{"text":"БАРБЕРШОП"})</div>
-      <div class="menu__list-item"><span>О НАС</span> @@include('../shared/marque.html',{"text":"О НАС"})</div>
-      <div class="menu__list-item"><span>УСЛУГИ</span> @@include('../shared/marque.html',{"text":"УСЛУГИ"})</div>
-      <div class="menu__list-item"><span>ПРОДУКЦИЯ</span> @@include('../shared/marque.html',{"text":"ПРОДУКЦИЯ"})</div>
-      <div class="menu__list-item"><span>МАСТЕРА</span> @@include('../shared/marque.html',{"text":"МАСТЕРА"})</div>
-      <div class="menu__list-item"><span>ФЛОАТИНГ</span> @@include('../shared/marque.html',{"text":"ФЛОАТИНГ"})</div>
-      <div class="menu__list-item"><span>АКЦИИ</span> @@include('../shared/marque.html',{"text":"АКЦИИ"})</div>
-      <div class="menu__list-item"><span>КОНТАКТЫ</span> @@include('../shared/marque.html',{"text":"КОНТАКТЫ"})</div>
-    </div>
-    <div class="menu__bottom">
-      <span>© 2022 unclechill.uz</span>
-      <img src="./img/footer/svg.svg" alt="" />
+    <div class="header__search-input">
+      <span>@@include('../shared/search.html')</span>
+      <input type="text" placeholder="Найти..." />
     </div>
   </div>
 </header>
