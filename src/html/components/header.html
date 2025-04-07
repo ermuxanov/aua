@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="header__inner">
+    <div class="header__logo">@@include('../components/logo.html')</div>
+    <div class="header__mid">
+      @@include('../shared/contacts.html')
+      <div class="header__menu">
+        <div class="header__menu-svg">
+          @@include('../shared/circle-text.html')
+        </div>
+        <div class="header__menu-burger">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="header__lang">
+        <a>РУ @@include('../shared/lang-decor.html')</a>
+        <a>O`Z @@include('../shared/lang-decor.html')</a>
+        <a>EN @@include('../shared/lang-decor.html')</a>
+      </div>
+    </div>
+    <a href="tel:998977766692" class="header__phone">+998 (97) 776-66-92</a>
+  </div>
+  <div class="menu">
+    <div class="menu__list">
+      <div class="menu__list-item"><span>БАРБЕРШОП</span> @@include('../shared/marque.html',{"text":"БАРБЕРШОП"})</div>
+      <div class="menu__list-item"><span>О НАС</span> @@include('../shared/marque.html',{"text":"О НАС"})</div>
+      <div class="menu__list-item"><span>УСЛУГИ</span> @@include('../shared/marque.html',{"text":"УСЛУГИ"})</div>
+      <div class="menu__list-item"><span>ПРОДУКЦИЯ</span> @@include('../shared/marque.html',{"text":"ПРОДУКЦИЯ"})</div>
+      <div class="menu__list-item"><span>МАСТЕРА</span> @@include('../shared/marque.html',{"text":"МАСТЕРА"})</div>
+      <div class="menu__list-item"><span>ФЛОАТИНГ</span> @@include('../shared/marque.html',{"text":"ФЛОАТИНГ"})</div>
+      <div class="menu__list-item"><span>АКЦИИ</span> @@include('../shared/marque.html',{"text":"АКЦИИ"})</div>
+      <div class="menu__list-item"><span>КОНТАКТЫ</span> @@include('../shared/marque.html',{"text":"КОНТАКТЫ"})</div>
+    </div>
+    <div class="menu__bottom">
+      <span>© 2022 unclechill.uz</span>
+      <img src="./img/footer/svg.svg" alt="" />
+    </div>
+  </div>
+</header>

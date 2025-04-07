@@ -1,0 +1,31 @@
+// Font
+@import "../files/fonts/font.css";
+
+// Base
+@import "./base/reset";
+@import "./base/var";
+@import "./base/libs";
+@import "./base/common";
+
+// Components
+@import "./components/header";
+@import "./components/footer";
+@import "./components/main-background";
+
+// Shared
+@import "./shared/text-bg";
+@import "./shared/button";
+@import "./shared/marque";
+@import "./shared/contacts";
+
+// Home Page
+@import "./sections/intro";
+@import "./sections/features";
+@import "./sections/price";
+@import "./sections/about";
+@import "./sections/master";
+@import "./sections/product";
+@import "./sections/spa";
+@import "./sections/friends";
+@import "./sections/action";
+

@@ -1,0 +1,12 @@
+
+
+
+body {
+  overflow: hidden visible;
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
