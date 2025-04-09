@@ -3,80 +3,170 @@
   position: fixed;
   top: 0;
   z-index: 999;
+  &.white & {
+    &__inner-bg {
+      background: rgba(255, 255, 255, 1);
+    }
+    &__logo svg .change-color {
+      fill: #6f2db5;
+    }
+    &__nav-item {
+      color: #170826;
+      &-main svg path {
+        fill: #170826;
+      }
+    }
+    &__phone-num {
+      color: #170826;
+    }
+    &__search svg path {
+      fill: #170826;
+    }
+    &__lang-selected {
+      background: #6f2db5;
+      color: #fff;
+    }
+  }
+  &.dropdown-open & {
+    &__nav-item {
+      color: #170826;
+      &-main {
+        svg path {
+          fill: #170826;
+        }
+      }
+    }
+    &__phone {
+      &-num {
+        color: #170826;
+      }
+      svg path {
+        fill: #6f2db5;
+      }
+    }
+    &__search svg path {
+      fill: #170826;
+    }
+    &__lang-selected {
+      background: #6f2db5;
+      color: #fff;
+    }
+    &__inner-overlay {
+      background: rgba(0, 0, 0, 0.3);
+      pointer-events: auto;
+      visibility: visible;
+      // background: darkcyan;
+    }
+    &__right {
+      .dropdown {
+        transition: 0.5s ease;
+        &.active {
+          transition: 0.5s ease 0.5s;
+        }
+      }
+      .dropdown-bg {
+        scale: 1;
+        opacity: 1;
+      }
+    }
+  }
   &__inner {
-    margin-left: calc((100% - 1420px) / 2);
+    padding-left: calc((100vw - 1420px) / 2);
+    height: 100px;
+    @media (max-width: 1480px) {
+      padding-left: 30px;
+    }
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s ease;
+    }
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      visibility: hidden;
+      background: rgba(0, 0, 0, 0);
+      transition: 0.5s ease;
+    }
   }
   &__block {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
   }
   &__right {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
-    padding-left: 30px;
-    width: 100%;
+    width: max-content;
     position: relative;
+    padding-right: calc((100vw - 1420px) / 2);
+    padding-left: 30px;
+    @media (max-width: 1480px) {
+      padding-right: 30px;
+    }
     &-inner {
       display: flex;
       align-items: center;
-      gap: 50px;
+      gap: 30px;
     }
-    &.dropdown-anim {
-      .header {
-        &__nav {
-          &-item {
-            &-main {
-              p,
-              a {
-                color: #170826;
-              }
-            }
-            & > p,
-            & > a {
-              color: #170826;
-            }
-            svg {
-              path {
-                fill: #170826;
-              }
-            }
-          }
-          &-dropdown-bg {
-            opacity: 1;
-            scale: 1;
-          }
-        }
-        &__phone {
-          color: #170826;
-          svg {
-            path {
-              fill: #6f2db5;
-            }
-          }
-        }
-        &__search-svg path {
-          fill: #6f2db5;
-        }
-        &__lang-selected {
-          background: #6f2db5;
-          color: #d8a94e;
+    .dropdown {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 16px;
+      color: #170826;
+      padding: 50px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 10%);
+      transition: 0.5s ease;
+      a {
+        transition: 0.5s ease;
+        &:hover {
+          color: #6f2db5;
         }
       }
-    }
-    .header__nav-dropdown-items {
-      &.anim-delay {
-        transition: 0.5s ease 0.5s;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0%);
+      }
+      &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        border-radius: 25px 0 25px 25px;
+        width: 100%;
+        scale: 0;
+        opacity: 0;
+        transform-origin: right top;
+        transition: 0.5s ease;
       }
     }
   }
   &__logo {
     width: 300px;
     height: fit-content;
-    padding-top: 25px;
     margin-right: 50px;
     svg {
       width: 100%;
       height: 100%;
+      path {
+        transition: 0.5s ease;
+      }
     }
   }
   &__nav {
@@ -84,93 +174,45 @@
     z-index: 2;
     &-list {
       display: flex;
-      gap: 45px;
+      gap: 35px;
       position: relative;
     }
     &-item {
+      font-weight: 600;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      position: relative;
+      transition: 0.5s ease;
+      @media (max-width: 1480px) {
+        font-size: 14px;
+      }
       &-main {
         display: flex;
         align-items: center;
         gap: 5px;
-      }
-      &.dropdown {
-        p,
-        svg,
-        svg path {
+        // transition: 0.5s ease 0.5s;
+        transition: 0.5s ease;
+        svg {
+          // transition: 0.5s ease 0.5s;
           transition: 0.5s ease;
-        }
-        &.open {
-          p {
-            color: #6f2db5;
+          path {
+            // transition: 0.5s ease 0.5s;
+            transition: 0.5s ease;
           }
+        }
+        &.active {
+          // transition: 0.5s ease;
+          color: #6f2db5;
           svg {
+            // transition: 0.5s ease;
             rotate: 180deg;
             path {
+              // transition: 0.5s ease;
               fill: #6f2db5;
             }
           }
-          .header__nav-dropdown {
-            transform: translate(0, 0%);
-            opacity: 1;
-            visibility: visible;
-            pointer-events: all;
-          }
         }
-      }
-      p,
-      a {
-        font-weight: 600;
-        font-size: 18px;
-        color: #fff;
-        cursor: pointer;
-        transition: 0.5s ease;
-      }
-    }
-    &-dropdown {
-      display: flex;
-      padding: 50px 0;
-      &-items {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        position: absolute;
-        z-index: 2;
-        opacity: 0;
-        transform: translate(0, 20%);
-        visibility: hidden;
-        transition: 0.5s ease;
-        &.open {
-          opacity: 1;
-          visibility: visible;
-          transform: translate(0, 0%);
-          transition: 0.5s ease;
-        }
-      }
-      &-item {
-        a {
-          font-weight: 600;
-          font-size: 16px;
-          color: #170826;
-          transition: 0.5s ease;
-          &:hover {
-            color: #6f2db5;
-          }
-        }
-      }
-      &-bg {
-        background: #fff;
-        border-radius: 25px 0 25px 25px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        pointer-events: none;
-        transform-origin: right top;
-        width: 100%;
-        height: 100%;
-        scale: 0;
-        opacity: 0;
-        transition: scale 0.5s ease, opacity 0.5s ease;
       }
     }
   }
@@ -184,17 +226,26 @@
     transition: 0.5s ease;
     position: relative;
     z-index: 2;
+    @media (max-width: 1480px) {
+      font-size: 14px;
+    }
+    &-num {
+      // transition: 0.5s ease 0.5s;
+      transition: 0.5s ease;
+    }
     svg path {
-      transition: fill 0.5s ease;
+      transition: 0.5s ease;
+      // transition: fill 0.5s ease 0.5s;
     }
   }
   &__search {
     cursor: pointer;
-    transition: scale 0.5s ease;
+    transition: 0.5s ease;
     position: relative;
     z-index: 2;
     svg path {
-      transition: fill 0.5s ease;
+      // transition: fill 0.5s ease 0.5s;
+      transition: 0.5s ease;
     }
     &:hover {
       scale: 1.1;
@@ -221,10 +272,8 @@
       input {
         width: 100%;
       }
-      span {
-        svg path {
-          fill: #6f2db5;
-        }
+      span svg path {
+        fill: #6f2db5;
       }
     }
   }
@@ -243,6 +292,7 @@
       font-weight: 700;
       font-size: 12px;
       color: #6f2db5;
+      // transition: 0.5s ease 0.5s;
       transition: 0.5s ease;
     }
     &:hover {
@@ -259,7 +309,7 @@
       transform: translate(calc(-50% + 15px), 50px);
       opacity: 0;
       visibility: hidden;
-      transition: 0.5s ease;
+      // transition: 0.5s ease;
       padding-top: 20px;
       &-svg {
         position: absolute;

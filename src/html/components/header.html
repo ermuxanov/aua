@@ -1,29 +1,43 @@
 <header class="header">
   <div class="header__inner">
+    <div class="header__inner-bg"></div>
+    <div class="header__inner-overlay"></div>
     <div class="header__block">
       <a href="#" class="header__logo">@@include('../shared/logo.html')</a>
       <div class="header__right">
-        <div class="header__nav-dropdown-bg"></div>
+        <div class="dropdown-bg"></div>
         <div class="header__right-inner">
-          <div class="header__nav">
+          <nav class="header__nav">
             <ul class="header__nav-list">
-              <li class="header__nav-item dropdown">
+              <li class="header__nav-item dropdowns">
                 <div class="header__nav-item-main">
                   <p>О компании</p>
-                  <span> @@include('../shared/arrow.html') </span>
+                  @@include('../shared/arrow.html')
                 </div>
               </li>
-              <li class="header__nav-item dropdown">
+              <li class="header__nav-item dropdowns">
                 <div class="header__nav-item-main">
                   <p>Услуги</p>
-                  <span> @@include('../shared/arrow.html') </span>
+                  @@include('../shared/arrow.html')
                 </div>
               </li>
               <li class="header__nav-item"><a href="#">Новости</a></li>
               <li class="header__nav-item"><a href="#">Вакансии</a></li>
               <li class="header__nav-item"><a href="#">Контакты</a></li>
             </ul>
-          </div>
+            <div class="dropdown">
+              <a href="./about.html">Информация о компании</a>
+              <a href="#">Наш флот</a>
+              <a href="#">Питание на борту</a>
+              <a href="#">Карта полетов</a>
+            </div>
+            <div class="dropdown">
+              <a href="#">Услуги кооторые предоставляет Asia Union Airlines</a>
+              <a href="#">Тарифы</a>
+              <a href="#">Багаж</a>
+              <a href="#">Перевозка животных</a>
+            </div>
+          </nav>
           <a class="header__phone" href="tel:998555069999">
             <span class="header__search-svg">@@include('../shared/phone.html')</span>
             <span class="header__phone-num">+99855 506 99 99</span>
@@ -43,22 +57,6 @@
             </div>
           </div>
         </div>
-        <ul class="header__nav-dropdown">
-          <div class="header__nav-dropdown-items">
-            <li class="header__nav-dropdown-item"><a href="#">Информация о компании</a></li>
-            <li class="header__nav-dropdown-item"><a href="#">Наш флот</a></li>
-            <li class="header__nav-dropdown-item"><a href="#">Питание на борту</a></li>
-            <li class="header__nav-dropdown-item"><a href="#">Карта полетов</a></li>
-          </div>
-          <div class="header__nav-dropdown-items">
-            <li class="header__nav-dropdown-item">
-              <a href="#">Услуги кооторые предоставляет Asia Union Airlines</a>
-            </li>
-            <li class="header__nav-dropdown-item"><a href="#">Тарифы</a></li>
-            <li class="header__nav-dropdown-item"><a href="#">Багаж</a></li>
-            <li class="header__nav-dropdown-item"><a href="#">Перевозка животных</a></li>
-          </div>
-        </ul>
       </div>
     </div>
     <div class="header__search-input">

@@ -25,8 +25,8 @@ export function comfort() {
           },
           onLeaveBack: () => {
             removeClasses(texts);
-            removeClasses(images);
             addClassName(texts[ind - 1]);
+            removeClasses(images);
             addClassName(images[ind - 1]);
             gsap.to(texts, {
               yPercent: -100 * (ind - 1),

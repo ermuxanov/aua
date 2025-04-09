@@ -1,46 +1,32 @@
+import { addClassName, removeClasses, removeClassName } from "./utils.js";
+
 export function header() {
+  const header = document.querySelector(".header");
   const headerRight = document.querySelector(".header__right");
-  const headerNavItems = document.querySelectorAll(".header__nav-item.dropdown");
-  const dropDowns = document.querySelectorAll(".header__nav-dropdown-items");
+  const headerNavItems = document.querySelectorAll(".header__nav-item-main");
+  const headerOverlay = document.querySelector(".header__inner-overlay");
+  const dropDownContents = document.querySelectorAll(".dropdown");
 
   let opened = false;
 
-  headerNavItems.forEach((headerNavItem, ind) => {
-    headerNavItem.addEventListener("click", () => {
-      headerRight.classList.add("dropdown-anim");
-      if (!opened) {
-        dropDowns[ind].classList.add("anim-delay");
-        setTimeout(() => {
-          dropDowns[ind].classList.remove("anim-delay");
-          opened = true;
-        }, 500);
-      }
-      dropDowns.forEach((dropDown, i) => {
-        headerNavItems[i].classList.remove("open");
-        headerNavItems[ind].classList.add("open");
-        if (ind === i) {
-          dropDown.classList.add("open");
-        } else {
-          dropDown.classList.remove("open");
-        }
-      });
+  headerNavItems.forEach((dropdown, ind) => {
+    dropdown.addEventListener("click", () => {
+      addClassName(header, "dropdown-open");
+      removeClasses(dropDownContents);
+      removeClasses(headerNavItems);
+      addClassName(dropDownContents[ind]);
+      addClassName(dropdown);
     });
   });
-
-  window.addEventListener("click", (e) => {
-    if (!e.target.closest(".header__right")) {
-      headerRight.classList.remove("dropdown-anim");
-      opened = false;
-      headerNavItems.forEach((e, i) => {
-        e.classList.remove("open");
-        dropDowns[i].classList.remove("open");
-      });
-    }
+  headerOverlay.addEventListener("click", (e) => {
+    removeClassName(header, "dropdown-open");
+    removeClasses(dropDownContents);
+    removeClasses(headerNavItems);
+    console.log(e.target);
   });
-
   // dropdown bg configuration
-  const dropDownItems = document.querySelectorAll(".header__nav-dropdown-items");
-  const dropdownBg = document.querySelector(".header__nav-dropdown-bg");
+  const dropDownItems = document.querySelectorAll(".dropdown");
+  const dropdownBg = document.querySelector(".dropdown-bg");
 
   let maxHeight = dropDownItems[0].offsetHeight;
   dropDownItems.forEach((dropDownItem) => {
@@ -49,7 +35,7 @@ export function header() {
     }
   });
 
-  dropdownBg.style.height = `calc(100% + ${maxHeight}px)`;
+  dropdownBg.style.height = `${headerRight.offsetHeight + dropDownItems[0].offsetHeight}px`;
 
   // header search
   const search = document.querySelector(".header__search");
@@ -62,5 +48,20 @@ export function header() {
     if (!e.target.closest(".header__search-input") && !e.target.closest(".header__search")) {
       searchInput.classList.remove("active");
     }
+  });
+
+  gsap.to(header, {
+    scrollTrigger: {
+      trigger: header,
+      start: `+=${window.innerHeight * 0.5} 30%`,
+      end: "+=1",
+      scrub: true,
+      onEnter: () => {
+        addClassName(header, "white");
+      },
+      onLeaveBack: () => {
+        removeClassName(header, "white");
+      },
+    },
   });
 }

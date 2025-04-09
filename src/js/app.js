@@ -4,6 +4,7 @@ import { header } from "./components/header.js";
 import { intro } from "./sections/intro.js";
 import { plane } from "./sections/plane.js";
 import { comfort } from "./sections/comfort.js";
+import { footer } from "./components/footer.js";
 
 window.addEventListener("load", () => {
   plugins();
@@ -12,4 +13,5 @@ window.addEventListener("load", () => {
   intro();
   plane();
   comfort();
+  footer();
 });
