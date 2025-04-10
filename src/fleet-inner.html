@@ -1,0 +1,16 @@
+<html lang="en" dir="ltr">
+  @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
+
+  <body>
+    @@include('html/components/header.html',{ 'color':'white' })
+
+    <main class="main" id="fleet-inner">
+      @@include('html/pages/fleet-inner/plane.html')
+      @@include('html/components/mainFlot.html')
+    </main>
+
+    @@include('html/components/footer.html')
+  </body>
+
+  <script src="./js/app.min.js"></script>
+</html>

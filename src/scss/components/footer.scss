@@ -1,8 +1,10 @@
 .footer {
   width: 100%;
   height: auto;
-  background: #2b0d47;
+  background: linear-gradient(to bottom, transparent 0px, transparent 198px, #2b0d47 198px, #2b0d47 100%);
   position: relative;
+  padding-top: 200px;
+  margin-top: 100px;
   &__inner {
     padding-top: 12vh;
     padding-bottom: 6.4em;
@@ -79,8 +81,8 @@
   }
   &__plane {
     position: absolute;
-    top: 80px;
+    top: 0;
     right: 0;
-    transform: translate(100%, -100%);
+    transform: translate(100%, 0%);
   }
 }

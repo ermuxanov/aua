@@ -5,7 +5,6 @@ export function comfort() {
   const images = document.querySelectorAll(".comfort__right-img");
   const section = document.querySelector(".comfort");
   const space = 0.5 * window.innerHeight;
-
   texts.forEach((item, ind) => {
     if (ind !== 0) {
       gsap.timeline({

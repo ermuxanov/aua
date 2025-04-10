@@ -10,7 +10,9 @@
 // Components
 @import "./components/header";
 @import "./components/footer";
-
+@import "./components/router";
+@import "./components/food";
+@import "./components/mainFlot";
 
 // Shared
 
@@ -21,4 +23,12 @@
 @import "./sections/comfort";
 @import "./sections/info";
 
+// about Page
+@import "./pages/about/banner.scss";
+@import "./pages/about/passenger.scss";
+@import "./pages/about/mission.scss";
+@import "./pages/about/flot.scss";
+@import "./pages/about/map.scss";
 
+// fleet-inner page
+@import "./pages/fleet-inner/plane.scss";

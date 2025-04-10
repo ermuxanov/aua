@@ -4,13 +4,16 @@
   <body>
     @@include('html/components/header.html',{ 'color':'white' })
 
-    <main class="main" id="about">
-      @@include('html/pages/about/banner.html')
-      @@include('html/pages/about/passenger.html')
-      @@include('html/pages/about/mission.html')
-      @@include('html/pages/about/flot.html')
+    <main class="main" id="fleet">
+      <div class="router container">
+        <a href="./">Главная</a>
+        <span>>></span>
+        <a href="./about.html">О компании</a>
+        <span>>></span>
+        <p>Наш флот</p>
+      </div>
+      @@include('html/components/mainFlot.html')
       @@include('html/components/food.html')
-      @@include('html/pages/about/map.html')
     </main>
 
     @@include('html/components/footer.html')

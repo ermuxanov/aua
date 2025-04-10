@@ -16,3 +16,7 @@ body {
   // padding: 0 calc((100% - 1420px) / 2);
   padding: 0 30px;
 }
+
+main:not(#main) {
+  padding-top: 100px;
+}

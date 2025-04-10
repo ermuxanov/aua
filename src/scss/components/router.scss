@@ -1,0 +1,18 @@
+.router {
+  padding-top: 35px;
+  font-size: 12px;
+  line-height: 167%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  a,
+  span {
+    font-weight: 600;
+    color: #868686;
+  }
+  p {
+    font-weight: 700;
+    color: #170826;
+    display: inline;
+  }
+}

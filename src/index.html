@@ -2,12 +2,12 @@
   @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
 
   <body>
-    @@include('html/components/header.html')
+    @@include('html/components/header.html',{ 'color':'' })
 
-    <main class="main">
+    <main class="main" id="main">
       @@include('html/sections/intro.html')
       @@include('html/sections/plane.html')
-      @@include('html/sections/feature.html')
+      @@include('html/sections/feature.html') 
       @@include('html/sections/comfort.html')
       @@include('html/sections/info.html')
     </main>

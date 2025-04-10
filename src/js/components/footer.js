@@ -6,7 +6,7 @@ export function footer() {
     // xPercent: -150,
     scrollTrigger: {
       trigger: ".footer",
-      start: "top bottom",
+      start: "top+=200 bottom",
       end: "bottom bottom",
       scrub: true,
     },

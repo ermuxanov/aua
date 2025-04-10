@@ -7,6 +7,8 @@ export function header() {
   const headerOverlay = document.querySelector(".header__inner-overlay");
   const dropDownContents = document.querySelectorAll(".dropdown");
 
+  const mainPage = document.querySelector("#main");
+
   let opened = false;
 
   headerNavItems.forEach((dropdown, ind) => {
@@ -50,18 +52,20 @@ export function header() {
     }
   });
 
-  gsap.to(header, {
-    scrollTrigger: {
-      trigger: header,
-      start: `+=${window.innerHeight * 0.5} 30%`,
-      end: "+=1",
-      scrub: true,
-      onEnter: () => {
-        addClassName(header, "white");
+  if (mainPage) {
+    gsap.to(header, {
+      scrollTrigger: {
+        trigger: header,
+        start: `+=${window.innerHeight * 0.5} 30%`,
+        end: "+=1",
+        scrub: true,
+        onEnter: () => {
+          addClassName(header, "white");
+        },
+        onLeaveBack: () => {
+          removeClassName(header, "white");
+        },
       },
-      onLeaveBack: () => {
-        removeClassName(header, "white");
-      },
-    },
-  });
+    });
+  }
 }
