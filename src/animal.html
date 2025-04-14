@@ -1,0 +1,29 @@
+<html lang="en" dir="ltr">
+  @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
+
+  <body>
+    @@include('html/components/header.html',{ 'color':'white' })
+
+    <main class="main" id="animal">
+      <section class="banner">
+        <div class="router container">
+          <a href="./">Главная</a>
+          <span>>></span>
+          <a href="./service.html">Услуги</a>
+          <span>>></span>
+          <a href="./bagagge-inner.html">Багаж</a>
+          <span>>></span>
+          <p>Перевозка животных</p>
+        </div>
+        @@include('html/components/banner-content.html',{'img':'./img/banner/animal.jpg','title':'Перевозка животных',
+        'text':'Lorem ipsum dolor sit amet consectetur. Mattis diam hendrerit gravida ornare fermentum diam.'})
+      </section>
+      @@include('html/pages/animal/transport-animal.html')
+      @@include('html/pages/animal/transport-type.html')
+    </main>
+
+    @@include('html/components/footer.html')
+  </body>
+
+  <script src="./js/app.min.js"></script>
+</html>

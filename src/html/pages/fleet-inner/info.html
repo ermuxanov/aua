@@ -1,0 +1,58 @@
+<section class="info">
+  <div class="info__inner container">
+    <p class="info__text">
+      Авиалайнер A330 произведен компанией Asia Union Airlines для обеспечения полного комфорта пассажиров. Этот
+      двухдвигательный самолет с двумя проходами между сиденьями и высокими потолками позволит вам ощутить комфорт в
+      течение всего путешествия.
+    </p>
+    <p class="info__text">
+      Современный сбалансированный флот, состоящий из наиболее популярных моделей, позволяет сформировать оптимальное
+      предложение для пассажиров вне зависимости от дальности направления перелета.
+    </p>
+    @@include('../../components/button.html',{'text':'Характеристики','class':'active'})
+    @@include('../../components/button.html',{'text':'Самолет внутри','class':''})
+  </div>
+  <div class="info__wrapper container active" data-tab-content="char">
+    <div class="info__flex">
+      <p class="info__flex-item">Тип самолета:</p>
+      <p class="info__flex-item">Дальнемагистральный пассажирский самолет</p>
+    </div>
+    <div class="info__flex">
+      <p class="info__flex-item">Длина(М):</p>
+      <p class="info__flex-item">63,7</p>
+    </div>
+    <div class="info__flex">
+      <p class="info__flex-item">Размах крыла</p>
+      <p class="info__flex-item">60,9</p>
+    </div>
+    <div class="info__flex">
+      <p class="info__flex-item">Ширина кабины</p>
+      <p class="info__flex-item">5,87</p>
+    </div>
+    <div class="info__flex">
+      <p class="info__flex-item">Вместимость пассажиров(ч)</p>
+      <p class="info__flex-item">RA-A330, эконом- класс</p>
+    </div>
+    <div class="info__flex">
+      <p class="info__flex-item">Максимальная взлетная масса(кг)</p>
+      <p class="info__flex-item">247 198</p>
+    </div>
+    <div class="info__flex">
+      <p class="info__flex-item">Крейсерская скорость</p>
+      <p class="info__flex-item">905</p>
+    </div>
+    <div class="info__flex">
+      <p class="info__flex-item">Максимальная высота полета (м):</p>
+      <p class="info__flex-item">13 140</p>
+    </div>
+    <div class="info__flex">
+      <p class="info__flex-item">Максимальная дальнсть полета (м):</p>
+      <p class="info__flex-item">9 700</p>
+    </div>
+  </div>
+  <div class="info__wrapper" data-tab-content="inside">
+    <div class="info__wrapper-img">
+      <img src="./img/fleet-inner/plane-front.png" alt="" />
+    </div>
+  </div>
+</section>

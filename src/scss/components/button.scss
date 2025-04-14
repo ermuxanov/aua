@@ -1,0 +1,20 @@
+.button {
+  padding: 12px 50px;
+  // background: #d8a94e;
+  border-radius: 35px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 172%;
+  color: #170826;
+  border: 1px solid #bfbfbf;
+  cursor: pointer;
+  margin-top: 60px;
+  &.active {
+    background: #d8a94e;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+  &:not(:first-of-type) {
+    margin-left: 30px;
+  }
+}

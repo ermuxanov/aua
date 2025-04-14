@@ -1,5 +1,4 @@
 .food {
-  margin-top: 150px;
   &__title {
     font-weight: 700;
     font-size: 35px;
@@ -12,27 +11,6 @@
     line-height: 139%;
     color: #000;
     margin-top: 30px;
-  }
-  &__station {
-    display: flex;
-    gap: 30px;
-    margin-top: 60px;
-    &-item {
-      padding: 12px 50px;
-      // background: #d8a94e;
-      border-radius: 35px;
-      font-weight: 800;
-      font-size: 18px;
-      line-height: 172%;
-      color: #170826;
-      border: 1px solid #bfbfbf;
-      cursor: pointer;
-      &.active {
-        background: #d8a94e;
-        color: #fff;
-        border: 1px solid transparent;
-      }
-    }
   }
   &__class {
     margin-top: 60px;

@@ -1,0 +1,21 @@
+<html lang="en" dir="ltr">
+  @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
+
+  <body>
+    @@include('html/components/header.html',{ 'color':'white' })
+
+    <main class="main" id="vacancy-inner">
+      <div class="router container">
+        <a href="./">Главная</a>
+        <span>>></span>
+        <a href="./vacancy.html">Вакансии</a>
+        <span>>></span>
+        <p>Набор пилотов</p>
+      </div>
+      @@include('html/pages/vacancy-inner/vacancy-inner.html')
+    </main>
+    @@include('html/components/footer.html')
+  </body>
+
+  <script src="./js/app.min.js"></script>
+</html>

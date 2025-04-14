@@ -13,6 +13,8 @@
 @import "./components/router";
 @import "./components/food";
 @import "./components/mainFlot";
+@import "./components/button";
+@import "./components/banner.scss";
 
 // Shared
 
@@ -24,7 +26,6 @@
 @import "./sections/info";
 
 // about Page
-@import "./pages/about/banner.scss";
 @import "./pages/about/passenger.scss";
 @import "./pages/about/mission.scss";
 @import "./pages/about/flot.scss";
@@ -32,3 +33,33 @@
 
 // fleet-inner page
 @import "./pages/fleet-inner/plane.scss";
+@import "./pages/fleet-inner/info.scss";
+
+// food page
+@import "./pages/food/special.scss";
+
+// service page
+@import "./pages/service/fly.scss";
+@import "./pages/service/tarif.scss";
+@import "./pages/service/bagagge.scss";
+@import "./pages/service/shipping.scss";
+
+// tarif-inner page
+@import "./pages/tarif-inner/tarif.scss";
+
+// bagagge-inner page
+@import "./pages/bagagge-inner/normal.scss";
+@import "./pages/bagagge-inner/bagagge-type.scss";
+
+// animal page
+@import "./pages/animal/transport-animal.scss";
+@import "./pages/animal/transport-type.scss";
+
+// vacancy page
+@import "./pages/vacancy/vacancy.scss";
+
+// vacancy-inner page
+@import "./pages/vacancy-inner/vacancy-inner.scss";
+
+// resume page
+@import "./pages/resume/resume.scss";

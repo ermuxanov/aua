@@ -1,5 +1,6 @@
 body {
   overflow: hidden visible;
+  height: auto;
   &.no-scroll {
     overflow: hidden;
   }
@@ -16,7 +17,9 @@ body {
   // padding: 0 calc((100% - 1420px) / 2);
   padding: 0 30px;
 }
-
+section {
+  margin-top: 150px;
+}
 main:not(#main) {
   padding-top: 100px;
 }

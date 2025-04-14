@@ -1,65 +1,67 @@
-.flot {
-  &__block {
-    background: #6f2db5;
-    padding: 85px;
-    border-radius: 20px;
-  }
-  &__heading {
-    font-weight: 700;
-    font-size: 35px;
-    line-height: 135%;
-    color: #fff;
-  }
-  &__text {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 139%;
-    color: #fff;
-    margin-top: 30px;
-  }
-  &__card {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-
-    &-item {
+.main#about {
+  .flot {
+    &__block {
+      background: #6f2db5;
+      padding: 85px;
+      border-radius: 20px;
+    }
+    &__heading {
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 135%;
+      color: #fff;
+    }
+    &__text {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 139%;
+      color: #fff;
+      margin-top: 30px;
+    }
+    &__card {
+      margin-top: 60px;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
       gap: 25px;
-      padding: 25px;
-      border-radius: 25px;
-      background: #f6f6f6;
-      cursor: pointer;
-      width: 100%;
-      border: 1px solid transparent;
-      &,
-      & * {
-        transition: 0.3s ease;
-      }
-      &:last-child {
-        width: 210px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-      &:hover {
-        background: #6f2db5;
-        border: 1px solid #fff;
-        .flot__card-name {
-          color: #fff;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 25px;
+        padding: 25px;
+        border-radius: 25px;
+        background: #f6f6f6;
+        cursor: pointer;
+        width: 100%;
+        border: 1px solid transparent;
+        &,
+        & * {
+          transition: 0.3s ease;
         }
-        svg path {
-          fill: #fff;
+        &:last-child {
+          width: 210px;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+        &:hover {
+          background: #6f2db5;
+          border: 1px solid #fff;
+          .flot__card-name {
+            color: #fff;
+          }
+          svg path {
+            fill: #fff;
+          }
         }
       }
-    }
-    &-name {
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: 0.02em;
-      color: #170826;
+      &-name {
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+        color: #170826;
+      }
     }
   }
 }

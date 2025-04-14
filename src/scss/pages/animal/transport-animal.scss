@@ -1,0 +1,65 @@
+.main#animal {
+  .transport-animal {
+    &__heading {
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 154%;
+      color: #170826;
+    }
+    &__block {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-top: 45px;
+    }
+    &__img {
+      width: 500px;
+      height: 350px;
+      border-radius: 20px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 156%;
+      color: #170826;
+    }
+    &__wrapper {
+      margin-top: 45px;
+      height: 350px;
+    }
+    &__wrap {
+      display: none;
+      align-items: center;
+      gap: 90px;
+      &.active{
+        display: flex;
+      }
+      &-left {
+        display: flex;
+        flex-direction: column;
+      }
+      &-right {
+        width: 510px;
+        height: 100%;
+        flex-shrink: 0;
+      }
+      &-heading {
+        font-weight: 600;
+        font-size: 23px;
+        color: #170826;
+      }
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156%;
+        color: #222;
+        margin-top: 40px;
+        &:not(:first-of-type) {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

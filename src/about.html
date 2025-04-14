@@ -5,7 +5,15 @@
     @@include('html/components/header.html',{ 'color':'white' })
 
     <main class="main" id="about">
-      @@include('html/pages/about/banner.html')
+      <section class="banner">
+        <div class="router container">
+          <a href="./">Главная</a>
+          <span>>></span>
+          <p>О компании</p>
+        </div>
+        @@include('html/components/banner-content.html',{'img':'./img/banner/dvigatel.jpg','title':'O компании',
+        'text':'Lorem ipsum dolor sit amet consectetur. Suspendisse lorem aenean a sed nibh.Lorem ipsum dolor sit amet consectetur. Suspendisse lorem aenean a sed nibh. Suspendisse lorem aenean a sed nibh.'})
+      </section>
       @@include('html/pages/about/passenger.html')
       @@include('html/pages/about/mission.html')
       @@include('html/pages/about/flot.html')

@@ -1,0 +1,27 @@
+<html lang="en" dir="ltr">
+  @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
+
+  <body>
+    @@include('html/components/header.html',{ 'color':'white' })
+
+    <main class="main" id="bagagge-inner">
+      <section class="banner">
+        <div class="router container white">
+          <a href="./">Главная</a>
+          <span>>></span>
+          <a href="./service.html">Услуги</a>
+          <span>>></span>
+          <p>Багаж</p>
+        </div>
+        @@include('html/components/banner-content.html',{'img':'./img/banner/bagagge.jpg','title':'Перевозка багажа',
+        'text':'Путешествуя регулярными и чартерными рейсами Asia Union Airlines, Вы можете оформить дополнительное место багажа. '})
+      </section>
+      @@include('html/pages/bagagge-inner/normal.html')
+      @@include('html/pages/bagagge-inner/bagagge-type.html')
+    </main>
+
+    @@include('html/components/footer.html')
+  </body>
+
+  <script src="./js/app.min.js"></script>
+</html>

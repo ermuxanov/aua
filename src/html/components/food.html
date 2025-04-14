@@ -6,13 +6,11 @@
       готовятся в соответствии с правилами халяль. Если у вас есть какие-либо особые предпочтения, вы можете запросить
       специальное питание во время брони билета.
     </p>
-    <div class="food__station">
-      <p class="food__station-item active">Ближнемагистральные рельсы</p>
-      <p class="food__station-item">Средне - и дальнемагистральные рейсы</p>
-    </div>
+    @@include('./button.html',{'text':'Ближнемагистральные рельсы','class':'active'})
+    @@include('./button.html',{'text':'Средне - и дальнемагистральные рейсы','class':''})
     <div class="food__class">
       <div class="food__class-wrapper">
-        <div class="food__class-item active">
+        <div class="food__class-item active" data-tab-content="short">
           <p class="food__class-heading">Экономический класс</p>
           <div class="food__class-wrap">
             <div class="food__class-flex">
@@ -21,7 +19,7 @@
             </div>
           </div>
         </div>
-        <div class="food__class-item">
+        <div class="food__class-item" data-tab-content="long">
           <p class="food__class-heading">Экономический класс</p>
           <div class="food__class-wrap">
             <div class="food__class-flex">
@@ -36,7 +34,7 @@
         </div>
       </div>
       <div class="food__class-wrapper">
-        <div class="food__class-item active">
+        <div class="food__class-item active" data-tab-content="short">
           <p class="food__class-heading">бизнес класс</p>
           <div class="food__class-wrap">
             <div class="food__class-flex">
@@ -53,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div class="food__class-item">
+        <div class="food__class-item" data-tab-content="long">
           <p class="food__class-heading">бизнес класс</p>
           <div class="food__class-wrap">
             <div class="food__class-flex">
