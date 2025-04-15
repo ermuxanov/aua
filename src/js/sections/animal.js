@@ -10,6 +10,8 @@ export function animal() {
 
       removeClasses(wrappers);
       addClassName(wrappers[ind]);
+      
+      ScrollTrigger.refresh();
     });
   });
 }

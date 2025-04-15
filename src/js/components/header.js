@@ -6,7 +6,7 @@ export function header() {
   const headerNavItems = document.querySelectorAll(".header__nav-item-main");
   const headerOverlay = document.querySelector(".header__inner-overlay");
   const dropDownContents = document.querySelectorAll(".dropdown");
-
+  const mains = document.querySelectorAll(".main");
   const mainPage = document.querySelector("#main");
 
   let opened = false;
@@ -68,4 +68,10 @@ export function header() {
       },
     });
   }
+
+  // header height
+  const root = document.documentElement;
+  
+  root.style.setProperty("--hh", `${header.offsetHeight}px`);
+
 }

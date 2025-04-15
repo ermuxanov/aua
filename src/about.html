@@ -1,19 +1,19 @@
 <html lang="en" dir="ltr">
   @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
 
-  <body>
+  <body data-page="about">
     @@include('html/components/header.html',{ 'color':'white' })
 
     <main class="main" id="about">
-      <section class="banner">
-        <div class="router container">
-          <a href="./">Главная</a>
-          <span>>></span>
-          <p>О компании</p>
-        </div>
-        @@include('html/components/banner-content.html',{'img':'./img/banner/dvigatel.jpg','title':'O компании',
-        'text':'Lorem ipsum dolor sit amet consectetur. Suspendisse lorem aenean a sed nibh.Lorem ipsum dolor sit amet consectetur. Suspendisse lorem aenean a sed nibh. Suspendisse lorem aenean a sed nibh.'})
-      </section>
+      <div class="router container">
+        <a href="./">Главная</a>
+        <span>>></span>
+        <p>О компании</p>
+      </div>
+      
+      @@include('html/components/banner.html',{'img':'./img/banner/dvigatel.jpg','title':'O компании',
+      'text':'Lorem ipsum dolor sit amet consectetur. Suspendisse lorem aenean a sed nibh.Lorem ipsum dolor sit amet consectetur. Suspendisse lorem aenean a sed nibh. Suspendisse lorem aenean a sed nibh.'})
+      
       @@include('html/pages/about/passenger.html')
       @@include('html/pages/about/mission.html')
       @@include('html/pages/about/flot.html')

@@ -1,0 +1,19 @@
+<html lang="en" dir="ltr">
+  @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
+
+  <body data-page="contacts">
+    @@include('html/components/header.html',{ 'color':'white' })
+
+    <main class="main" id="contacts">
+      <div class="router container">
+        <a href="./">Главная</a>
+        <span>>></span>
+        <p>Контакты</p>
+      </div>
+      @@include('html/pages/contacts/contacts.html')
+    </main>
+    @@include('html/components/footer.html')
+  </body>
+
+  <script src="./js/app.min.js"></script>
+</html>

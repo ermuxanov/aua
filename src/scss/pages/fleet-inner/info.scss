@@ -18,12 +18,71 @@
       flex-direction: column;
       gap: 20px;
       margin-top: 45px;
-      &.active{
+      position: relative;
+      &.active {
         display: flex;
       }
       &[data-tab-content="inside"] {
         height: 875px;
         background: #f6f6f6;
+      }
+      &-svg {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 103px;
+      }
+      .tooltip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 160px;
+        height: auto;
+        background: #fff;
+        border-radius: 15px;
+        padding-bottom: 30px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s ease;
+        &.active {
+          opacity: 1;
+          visibility: visible;
+        }
+        &__img {
+          img {
+            display: none;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            &.active {
+              display: block;
+            }
+          }
+        }
+        &__text {
+          font-size: 16px;
+          font-weight: 500;
+          color: #170826;
+          margin-top: 20px;
+          text-align: center;
+        }
+        &__num {
+          font-size: 24px;
+          font-weight: 700;
+          color: #170826;
+          margin-top: 10px;
+          text-align: center;
+          span {
+            display: none;
+            &.active {
+              display: block;
+            }
+          }
+        }
       }
     }
     &__flex {

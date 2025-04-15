@@ -4,7 +4,14 @@ export function comfort() {
   const texts = document.querySelectorAll(".comfort__left-item");
   const images = document.querySelectorAll(".comfort__right-img");
   const section = document.querySelector(".comfort");
-  const space = 0.5 * window.innerHeight;
+  const sectionInner = document.querySelector(".comfort__inner");
+  const space = .75 * window.innerHeight;
+  const header = document.querySelector(".header");
+
+  sectionInner.style.height = `${window.innerHeight - header.offsetHeight}px`;
+  sectionInner.style.top = `${header.offsetHeight}px`;
+  
+  
   texts.forEach((item, ind) => {
     if (ind !== 0) {
       gsap.timeline({

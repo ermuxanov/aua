@@ -1,7 +1,7 @@
 <html lang="en" dir="ltr">
   @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
 
-  <body>
+  <body data-page="tarif-inner">
     @@include('html/components/header.html',{ 'color':'white' })
 
     <main class="main" id="tarif-inner">
@@ -12,6 +12,7 @@
         <span>>></span>
         <p>Тарифы</p>
       </div>
+      
       @@include('html/pages/tarif-inner/tarif.html')
     </main>
     @@include('html/components/footer.html')

@@ -9,10 +9,10 @@
       Современный сбалансированный флот, состоящий из наиболее популярных моделей, позволяет сформировать оптимальное
       предложение для пассажиров вне зависимости от дальности направления перелета.
     </p>
-    @@include('../../components/button.html',{'text':'Характеристики','class':'active'})
-    @@include('../../components/button.html',{'text':'Самолет внутри','class':''})
+    @@include('../../components/button.html',{'text':'Характеристики','class':''})
+    @@include('../../components/button.html',{'text':'Самолет внутри','class':'active'})
   </div>
-  <div class="info__wrapper container active" data-tab-content="char">
+  <div class="info__wrapper container" data-tab-content="char">
     <div class="info__flex">
       <p class="info__flex-item">Тип самолета:</p>
       <p class="info__flex-item">Дальнемагистральный пассажирский самолет</p>
@@ -50,9 +50,21 @@
       <p class="info__flex-item">9 700</p>
     </div>
   </div>
-  <div class="info__wrapper" data-tab-content="inside">
+  <div class="info__wrapper active" data-tab-content="inside">
     <div class="info__wrapper-img">
       <img src="./img/fleet-inner/plane-front.png" alt="" />
+    </div>
+    <div class="info__wrapper-svg">@@include('../../shared/plane.html')</div>
+    <div class="info__wrapper-tooltip tooltip">
+      <div class="tooltip__img">
+        <img src="./img/fleet-inner/place-01.webp" alt="" class="active" />
+        <img src="./img/fleet-inner/place-02.jpg" alt="" />
+      </div>
+      <p class="tooltip__text">мест</p>
+      <div class="tooltip__num">
+        <span class="active">144</span>
+        <span>18</span>
+      </div>
     </div>
   </div>
 </section>

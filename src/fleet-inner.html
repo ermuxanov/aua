@@ -1,10 +1,19 @@
 <html lang="en" dir="ltr">
   @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
 
-  <body>
+  <body data-page="fleet-inner">
     @@include('html/components/header.html',{ 'color':'white' })
 
     <main class="main" id="fleet-inner">
+      <div class="router white container">
+        <a href="./">Главная</a>
+        <span>>></span>
+        <a href="./about.html">О компании</a>
+        <span>>></span>
+        <a href="./fleet.html">Наш флот</a>
+        <span>>></span>
+        <p>A330</p>
+      </div>
       @@include('html/pages/fleet-inner/plane.html')
       @@include('html/pages/fleet-inner/info.html')
       @@include('html/components/mainFlot.html')

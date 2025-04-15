@@ -8,24 +8,51 @@ import { footer } from "./components/footer.js";
 import { food } from "./components/food.js";
 import { info } from "./sections/info.js";
 import { animal } from "./sections/animal.js";
+import { news } from "./sections/news.js";
+import { router } from "./components/router.js";
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+const page = document.body.dataset.page;
+console.log(page);
 
 window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
   plugins();
   Swiper.use([Navigation, EffectFade, Autoplay]);
   header();
   footer();
 
   // main page
-  intro();
-  plane();
-  comfort();
+  if (page == "main") {
+    intro();
+    plane();
+    comfort();
+  }
 
   // about page
-  food();
+  if (page === "about" || page === "food") {
+    food();
+  }
 
   // fleet-inner page
-  info();
+  if (page === "fleet-inner") {
+    info();
+  }
 
   // animal page
-  animal();
+  if (page === "animal") {
+    animal();
+  }
+
+  // news page
+  if (page === "news") {
+    news();
+  }
+
+  // router
+  if (page !== "main") {
+  }
+  router();
 });

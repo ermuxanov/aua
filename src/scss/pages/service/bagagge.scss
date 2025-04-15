@@ -1,7 +1,10 @@
 .main#service {
   .bagagge {
-    background: #6f2db5;
-    &__inner{
+    &__inner {
+      background: #6f2db5;
+
+    }
+    &__block {
       display: flex;
       flex-direction: column;
       justify-content: center;

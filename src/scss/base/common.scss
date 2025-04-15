@@ -17,9 +17,15 @@ body {
   // padding: 0 calc((100% - 1420px) / 2);
   padding: 0 30px;
 }
+
 section {
-  margin-top: 150px;
+  padding-top: 150px;
+}
+.main#main {
+  section {
+    padding-top: 0;
+  }
 }
 main:not(#main) {
-  padding-top: 100px;
+  padding-top: var(--hh);
 }

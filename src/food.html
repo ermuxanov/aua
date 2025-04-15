@@ -1,23 +1,22 @@
 <html lang="en" dir="ltr">
   @@include('html/components/head.html',{ "title":"Asia Union Airlines" })
 
-  <body>
+  <body data-page="food">
     @@include('html/components/header.html',{ 'color':'white' })
 
     <main class="main" id="food">
-      <section class="banner">
-        <div class="router container white">
-          <a href="./">Главная</a>
-          <span>>></span>
-          <a href="./about.html">О компании</a>
-          <span>>></span>
-          <a href="./fleet.html">Наш флот</a>
-          <span>>></span>
-          <p>Питание на борту</p>
-        </div>
-        @@include('html/components/banner-content.html',{'img':'./img/banner/food.jpg','title':'Питание на борту',
-        'text':'Почувствуй вкус в полете'})
-      </section>
+      <div class="router container white">
+        <a href="./">Главная</a>
+        <span>>></span>
+        <a href="./about.html">О компании</a>
+        <span>>></span>
+        <a href="./fleet.html">Наш флот</a>
+        <span>>></span>
+        <p>Питание на борту</p>
+      </div>
+      
+      @@include('html/components/banner.html',{'img':'./img/banner/food.jpg','title':'Питание на борту','text':'Почувствуй вкус в полете'})
+      
       @@include('html/components/food.html')
       @@include('html/pages/food/special.html')
     </main>
