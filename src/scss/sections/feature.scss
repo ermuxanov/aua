@@ -48,11 +48,22 @@
       margin-top: 55px;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 10px;
       margin-left: auto;
+      & * {
+        transition: 0.5s ease;
+      }
+      &:hover {
+        p {
+          opacity: 0.5;
+        }
+        img {
+          transform: translate(10px, 0);
+        }
+      }
       p {
         font-weight: 700;
-        font-size: 14px;
+        font-size: 18px;
         text-align: center;
         color: #d8a94e;
       }

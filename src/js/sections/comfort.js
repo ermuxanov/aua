@@ -5,21 +5,23 @@ export function comfort() {
   const images = document.querySelectorAll(".comfort__right-img");
   const section = document.querySelector(".comfort");
   const sectionInner = document.querySelector(".comfort__inner");
-  const space = .75 * window.innerHeight;
+  const space = 0.5 * window.innerHeight;
   const header = document.querySelector(".header");
 
   sectionInner.style.height = `${window.innerHeight - header.offsetHeight}px`;
   sectionInner.style.top = `${header.offsetHeight}px`;
-  
-  
+
   texts.forEach((item, ind) => {
     if (ind !== 0) {
       gsap.timeline({
         scrollTrigger: {
           trigger: ".comfort__inner",
-          start: `${((section.offsetHeight - 2 * space) / (texts.length - 1)) * (ind - 1) + space} top`,
+          start: `${((section.offsetHeight - 2 * space) / (texts.length - 1)) * (ind - 1) + space} ${
+            header.offsetHeight
+          }px`,
           end: "+=1",
           scrub: true,
+
           onEnter: () => {
             removeClasses(texts);
             addClassName(item);

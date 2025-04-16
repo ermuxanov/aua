@@ -34,11 +34,46 @@
         display: flex;
         flex-direction: column;
         padding: 40px 30px;
+        position: relative;
+        overflow: hidden;
+        & * {
+          position: relative;
+          z-index: 2;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: #621dab;
+          transition: 0.5s ease;
+        }
+        &:hover {
+          &::before {
+            transform: translate(-50%, -50%) scale(12);
+          }
+          .vacancy__card-date,
+          .vacancy__card-desc,
+          .vacancy__card-text {
+            color: #fff;
+          }
+          svg {
+            transform: translate(20px, 0);
+            path {
+              fill: #fff;
+            }
+          }
+        }
       }
       &-date {
         font-weight: 400;
         font-size: 14px;
         color: #d8a94e;
+        transition: 0.5s ease;
       }
       &-desc {
         margin-top: auto;
@@ -46,15 +81,21 @@
         font-size: 20px;
         line-height: 130%;
         color: #170826;
+        transition: 0.5s ease;
       }
       &-text {
         margin-top: 30px;
         font-weight: 400;
         font-size: 16px;
         color: #170826;
+        transition: 0.5s ease;
       }
       svg {
         margin-top: auto;
+        transition: 0.5s ease;
+        path {
+          transition: 0.5s ease;
+        }
       }
     }
   }

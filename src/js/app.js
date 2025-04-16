@@ -1,58 +1,55 @@
 import Swiper from "swiper";
 import { plugins } from "./components/plugins.js";
 import { header } from "./components/header.js";
-import { intro } from "./sections/intro.js";
-import { plane } from "./sections/plane.js";
-import { comfort } from "./sections/comfort.js";
 import { footer } from "./components/footer.js";
-import { food } from "./components/food.js";
-import { info } from "./sections/info.js";
-import { animal } from "./sections/animal.js";
-import { news } from "./sections/news.js";
-import { router } from "./components/router.js";
 
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
+import { mainPage } from "./pages/mainPage.js";
+import { aboutPage } from "./pages/aboutPage.js";
+import { fleetInnerPage } from "./pages/fleetInnerPage.js";
+import { foodPage } from "./pages/foodPage.js";
+import { fleetPage } from "./pages/fleetPage.js";
+import { animalPage } from "./pages/animalPage.js";
+import { servicePage } from "./pages/servicePage.js";
+import { newsPage } from "./pages/newsPage.js";
+import { bagaggeInnerPage } from "./pages/bagaggeInnerPage.js";
+
+// if ("scrollRestoration" in history) {
+//   history.scrollRestoration = "manual";
+// }
+
 const page = document.body.dataset.page;
-console.log(page);
 
 window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
   plugins();
   Swiper.use([Navigation, EffectFade, Autoplay]);
   header();
   footer();
 
   // main page
-  if (page == "main") {
-    intro();
-    plane();
-    comfort();
-  }
+  mainPage(page);
 
   // about page
-  if (page === "about" || page === "food") {
-    food();
-  }
+  aboutPage(page);
 
   // fleet-inner page
-  if (page === "fleet-inner") {
-    info();
-  }
+  fleetInnerPage(page);
+
+  // food page
+  foodPage(page);
+
+  // fleet page
+  fleetPage(page);
 
   // animal page
-  if (page === "animal") {
-    animal();
-  }
+  animalPage(page);
+
+  // service page
+  servicePage(page);
 
   // news page
-  if (page === "news") {
-    news();
-  }
+  newsPage(page);
 
-  // router
-  if (page !== "main") {
-  }
-  router();
+  // bagagge-inner page
+  bagaggeInnerPage(page);
 });

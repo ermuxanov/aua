@@ -23,6 +23,11 @@
       text-align: center;
       color: #6f2db5;
       display: inline-block;
+      transition: 0.3s ease;
+      &:hover {
+        color: rgba(216, 169, 78, 1);
+        text-decoration: none;
+      }
     }
     &__wrapper {
       display: flex;

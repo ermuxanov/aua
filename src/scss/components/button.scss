@@ -9,10 +9,18 @@
   border: 1px solid #bfbfbf;
   cursor: pointer;
   margin-top: 60px;
+  transition: 0.3s ease;
+  &:hover {
+    border: 1px solid #621dab;
+    color: #621dab;
+  }
   &.active {
     background: #d8a94e;
     color: #fff;
     border: 1px solid transparent;
+    &:hover {
+      background: #621dab;
+    }
   }
   &:not(:first-of-type) {
     margin-left: 30px;

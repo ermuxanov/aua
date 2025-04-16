@@ -21,6 +21,11 @@
         margin-top: 25px;
       }
     }
+    &__left{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     &__link {
       display: block;
       margin-top: 25px;

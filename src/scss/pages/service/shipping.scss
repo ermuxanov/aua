@@ -32,7 +32,12 @@
       text-decoration-skip-ink: none;
       color: #6f2db5;
       margin-top: 35px;
-      display: block;
+      display: inline-block;
+      transition: 0.3s ease;
+      &:hover {
+        color: rgba(216, 169, 78, 1);
+        text-decoration: none;
+      }
     }
     &__left {
       display: flex;

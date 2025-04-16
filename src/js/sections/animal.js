@@ -1,4 +1,4 @@
-import { addClassName, removeClasses } from "../components/utils.js";
+import { addClassName, gsapAnim, removeClasses } from "../components/utils.js";
 
 export function animal() {
   const buttons = document.querySelectorAll(".main#animal .transport-animal .button");
@@ -10,8 +10,23 @@ export function animal() {
 
       removeClasses(wrappers);
       addClassName(wrappers[ind]);
-      
+
       ScrollTrigger.refresh();
     });
   });
+
+  gsapAnim(
+    [
+      ".transport-animal__heading",
+      ".transport-animal__img",
+      ".transport-animal__text",
+      ".transport-animal .button",
+      ".transport-animal__wrap-heading",
+      ".transport-animal__wrap-text",
+      ".transport-animal__wrap-right",
+      ".transport-type__heading",
+      ".transport-type__wrapper",
+    ],
+    100
+  );
 }

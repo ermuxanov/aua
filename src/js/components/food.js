@@ -1,4 +1,4 @@
-import { addClassName, removeClasses, removeClassName } from "./utils.js";
+import { addClassName, gsapAnim, removeClasses, removeClassName } from "./utils.js";
 
 export function food() {
   const buttons = document.querySelectorAll(".food .button");
@@ -14,4 +14,5 @@ export function food() {
       });
     });
   });
+  gsapAnim([".food__title,.food__text,.food button,.food__class"], 100);
 }

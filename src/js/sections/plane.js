@@ -1,3 +1,5 @@
+import { gsapAnim } from "../components/utils.js";
+
 export function plane() {
   const planeTop = document.querySelector(".plane__top");
   const planeImg = document.querySelector(".plane__img");
@@ -12,4 +14,6 @@ export function plane() {
       scrub: true,
     },
   });
+  
+  gsapAnim(".plane__card", 50, 25);
 }

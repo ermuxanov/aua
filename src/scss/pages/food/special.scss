@@ -24,6 +24,8 @@
         padding: 30px;
         display: flex;
         flex-direction: column;
+        max-width: calc((100% - 60px) / 3);
+        width: 100%;
       }
       &-desc {
         margin-top: 20px;

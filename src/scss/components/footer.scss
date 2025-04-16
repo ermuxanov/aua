@@ -24,6 +24,10 @@
       color: #fff;
       max-width: 290px;
       width: 100%;
+      transition: 0.5s ease;
+      &:hover {
+        color: rgb(201, 181, 225);
+      }
       span {
         font-weight: 600;
       }
@@ -39,6 +43,10 @@
       font-weight: 600;
       font-size: 16px;
       color: #fff;
+      transition: 0.5s ease;
+      &:hover {
+        color: rgb(201, 181, 225);
+      }
     }
   }
   &__right {
@@ -66,6 +74,10 @@
         font-weight: 600;
         font-size: 14px;
         color: #fff;
+        transition: 0.5s ease;
+        &:hover {
+          color: rgb(201, 181, 225);
+        }
       }
     }
   }

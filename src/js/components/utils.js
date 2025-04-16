@@ -30,6 +30,44 @@ export function removeClasses(array, className = "active") {
   });
 }
 
+export function gsapAnim(selectors, transformY, start = 0) {
+  const elements = [];
+
+  const selectorList = Array.isArray(selectors) ? selectors : [selectors];
+
+  selectorList.forEach((selector) => {
+    elements.push(...document.querySelectorAll(selector));
+  });
+
+  elements.forEach((element) => {
+    gsap.set(element, {
+      y: `${transformY}px`,
+      autoAlpha: 0,
+    });
+
+    gsap.to(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: `${start}% bottom`,
+        end: "+=1",
+        scrub: true,
+        onEnter: () => {
+          gsap.to(element, {
+            autoAlpha: 1,
+            y: 0,
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(element, {
+            autoAlpha: 0,
+            y: `${transformY}px`,
+          });
+        },
+      },
+    });
+  });
+}
+
 export function changeText(el, text) {
   el.innerText = text;
 }

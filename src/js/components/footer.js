@@ -8,7 +8,7 @@ export function footer() {
       trigger: ".footer",
       start: "top+=200 bottom",
       end: "bottom bottom",
-      scrub: true,
+      scrub: 1,
     },
   });
 }

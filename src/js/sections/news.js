@@ -1,4 +1,4 @@
-import { removeClasses, toggleClassName } from "../components/utils.js";
+import { gsapAnim, removeClasses, toggleClassName } from "../components/utils.js";
 
 export function news() {
   const button = document.querySelector(".news__btn");
@@ -11,4 +11,6 @@ export function news() {
     toggleClassName(newsGrid, "show");
     ScrollTrigger.refresh();
   });
+
+  gsapAnim(".news__grid-item", 100, 50);
 }
