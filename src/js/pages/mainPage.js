@@ -9,7 +9,7 @@ export function mainPage(page) {
     plane();
     comfort();
 
-    gsapAnim(".info__block", 100, 50);
+    gsapAnim([".info__left",".info__right-card"], 100, 50);
     gsapAnim([".feature__left", ".feature__mid", ".feature__title", ".feature__text", ".feature__more"], 100, 0);
   }
 }

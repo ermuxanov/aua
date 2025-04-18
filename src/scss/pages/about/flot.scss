@@ -23,7 +23,12 @@
       display: flex;
       justify-content: space-between;
       gap: 25px;
-
+      &-img {
+        width: 245px;
+        img {
+          width: 100%;
+        }
+      }
       &-item {
         display: flex;
         flex-direction: column;
@@ -33,7 +38,6 @@
         border-radius: 25px;
         background: #f6f6f6;
         cursor: pointer;
-        width: 100%;
         border: 1px solid transparent;
         &,
         & * {
@@ -61,6 +65,50 @@
         font-size: 20px;
         letter-spacing: 0.02em;
         color: #170826;
+      }
+    }
+  }
+  @media (max-width: 1366px) {
+    .flot {
+      &__card {
+        flex-wrap: wrap;
+        a {
+          // width: max-content;
+          &:last-of-type {
+            width: 100%;
+            flex-direction: row-reverse;
+            // width: max-content;
+            // flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1180px) {
+    .flot {
+      &__card {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .flot {
+      &__block {
+        padding: 30px;
+      }
+      &__card {
+        &-item {
+          display: block;
+          width: 100%;
+          // flex: 1;
+        }
+        &-img {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
       }
     }
   }

@@ -20,7 +20,6 @@ export function animal() {
       ".transport-animal__heading",
       ".transport-animal__img",
       ".transport-animal__text",
-      ".transport-animal .button",
       ".transport-animal__wrap-heading",
       ".transport-animal__wrap-text",
       ".transport-animal__wrap-right",
@@ -29,4 +28,5 @@ export function animal() {
     ],
     100
   );
+  gsapAnim(".transport-animal .button", 20);
 }

@@ -1,23 +1,40 @@
+@use "sass:math";
+
+// @function rem($screen) {
+//   @return math.div(100vw, $screen) * 1;
+// }
+// html,
+// body {
+//   font-size: rem(1920);
+//   @media (max-width: 768px) {
+//     font-size: rem(360);
+//   }
+// }
+
 body {
   overflow: hidden visible;
   height: auto;
-  &.no-scroll {
-    overflow: hidden;
-  }
+  // &.no-scroll {
+  //   overflow: hidden;
+  // }
 }
 ::-webkit-scrollbar {
   display: none;
 }
-
+* {
+  // outline: 1px solid green;
+}
 .container {
   // max-width: 100%;
   max-width: 1480px;
   width: 100%;
   margin: 0 auto;
-  // padding: 0 calc((100% - 1420px) / 2);
-  padding: 0 30px;
+  // padding: 0 calc((100% - 1420rem) / 2);
+  padding: 0 var(--pd);
 }
-
+* {
+  // outline: 1px solid green;
+}
 section {
   padding-top: 150px;
 }
@@ -28,4 +45,75 @@ section {
 }
 main:not(#main) {
   padding-top: var(--hh);
+}
+
+.cloud-bot {
+  &::before {
+    background: url("../img/cloud-01.png") no-repeat left bottom / contain;
+    content: "";
+    position: absolute;
+    bottom: calc(1 * 20px);
+    left: calc(-2 * 20px);
+    width: calc(100% + 4 * 20px);
+    height: 100%;
+    transform: rotate(180deg);
+    z-index: 1;
+    animation: cloud-bot 25s linear infinite;
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(4 * 20px);
+    background: linear-gradient(180deg, #fff 73%, rgba(190, 124, 212, 0) 100%);
+  }
+  @keyframes cloud-bot {
+    0% {
+      transform: rotate(180deg) translateX(calc(-2 * 20px));
+    }
+    50% {
+      transform: rotate(180deg) translateX(calc(2 * 20px));
+    }
+    100% {
+      transform: rotate(180deg) translateX(calc(-2 * 20px));
+    }
+  }
+}
+
+.cloud {
+  &::before {
+    background: url("../img/cloud-01.png") no-repeat left bottom / contain;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(-2 * 20px);
+    width: calc(100% + 4 * 20px);
+    height: 100%;
+    z-index: 1;
+    animation: cloud 25s linear infinite;
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(4 * 20px);
+    background: linear-gradient(0deg, #fff 73%, rgba(190, 124, 212, 0) 100%);
+  }
+  @keyframes cloud {
+    0% {
+      transform: translateX(calc(-2 * 20px));
+    }
+    50% {
+      transform: translateX(calc(2 * 20px));
+    }
+    100% {
+      transform: translateX(calc(-2 * 20px));
+    }
+  }
 }

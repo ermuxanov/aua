@@ -3,6 +3,7 @@ import { addClassName, removeClasses, removeClassName } from "../components/util
 export function planeInfo() {
   const buttons = document.querySelectorAll(".main#fleet-inner .info .button");
   const wrappers = document.querySelectorAll(".main#fleet-inner .info__wrapper");
+  const wrapperImg = document.querySelector(".main#fleet-inner .info__wrapper-img");
   buttons.forEach((button, ind) => {
     button.addEventListener("click", () => {
       removeClasses(buttons);
@@ -44,10 +45,10 @@ export function planeInfo() {
     });
   });
 
-  gsap.to(".info__wrapper-img", {
+  gsap.to(".info__ghost .info__wrapper-img", {
     transform: `translate(0%, 0)`,
     scrollTrigger: {
-      trigger: ".info__wrapper-img",
+      trigger: ".info__ghost .info__wrapper-img",
       start: "top bottom",
       end: "bottom+=20% bottom",
       scrub: 1,

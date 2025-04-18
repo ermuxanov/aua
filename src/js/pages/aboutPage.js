@@ -7,7 +7,7 @@ export function aboutPage(page) {
     passenger();
     food();
 
-    gsapAnim(".mission__block", 150, 20);
+    gsapAnim([".mission__left", ".mission__right"], 150, 20);
     gsapAnim(".flot__block", 120, 20);
     gsapAnim([".map__right,.map__left"], 200, 10);
   }

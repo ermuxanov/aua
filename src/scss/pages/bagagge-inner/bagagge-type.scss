@@ -34,4 +34,14 @@
       }
     }
   }
+  @media (max-width: 900px) {
+    .bagagge-type {
+      &__card {
+        flex-direction: column;
+      }
+      &__heading {
+        font-size: 24px;
+      }
+    }
+  }
 }

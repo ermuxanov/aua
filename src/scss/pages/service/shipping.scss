@@ -58,4 +58,17 @@
       }
     }
   }
+  @media (max-width:1200px) {
+    .shipping{
+      &__block{
+        flex-direction: column;
+      }
+      &__desc{
+        margin-top: 30px;
+      }
+      &__right{
+        height: auto;
+      }
+    }
+  }
 }

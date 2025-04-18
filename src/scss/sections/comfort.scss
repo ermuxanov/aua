@@ -4,7 +4,7 @@
     height: 300vh;
     background: #621dab;
     padding-bottom: 200px;
-    outline: 1px solid green;
+    position: relative;
     &__inner {
       display: flex;
       align-items: center;
@@ -63,6 +63,54 @@
         &:nth-child(3) {
           transform: translate(0, -200%);
         }
+      }
+    }
+  }
+  @media (max-width: 1279px) {
+    .comfort {
+      &__right {
+        width: 30vw;
+        height: 30vw;
+        img {
+          height: 100%;
+        }
+      }
+      &__left {
+        height: 12vw;
+        &-item {
+          span {
+            font-size: 4.5vw;
+          }
+        }
+      }
+      &__block {
+        // flex-direction: column-reverse;
+        justify-content: space-around;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .comfort {
+      &__right {
+        width: 300px;
+        height: 300px;
+      }
+      &__left {
+        height: 50px;
+        &-item {
+          padding: 15px 0;
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .comfort {
+      &__block {
+        gap: 40vw;
+        flex-direction: column;
       }
     }
   }

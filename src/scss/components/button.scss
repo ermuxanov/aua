@@ -9,7 +9,7 @@
   border: 1px solid #bfbfbf;
   cursor: pointer;
   margin-top: 60px;
-  transition: 0.3s ease;
+  transition: border 0.3s ease, color 0.3s ease, background 0.3s ease;
   &:hover {
     border: 1px solid #621dab;
     color: #621dab;
@@ -24,5 +24,21 @@
   }
   &:not(:first-of-type) {
     margin-left: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+@media (max-width: 768px) {
+  .button {
+    display: block;
+    margin-top: 30px;
+    &:not(:first-of-type) {
+      margin-left: 0;
+    }
   }
 }

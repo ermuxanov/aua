@@ -17,7 +17,9 @@ main#fleet-inner {
       left: 0;
       height: 100%;
       z-index: -1;
+      width: 100%;
       img {
+        width: 100%;
         height: 100%;
       }
     }
@@ -32,14 +34,18 @@ main#fleet-inner {
       img {
         height: 100%;
         width: 100%;
+        object-fit: cover;
       }
     }
     &__img {
+      max-width: 62%;
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       img {
+        width: 100%;
         animation: levitate 15s ease-in-out infinite;
       }
     }
@@ -64,7 +70,7 @@ main#fleet-inner {
       0% {
         transform: translateX(-100px);
       }
-      50%{
+      50% {
         transform: translateX(0);
       }
       100% {

@@ -53,4 +53,14 @@
       }
     }
   }
+  @media (max-width:1000px) {
+    .normal{
+      &__wrapper{
+        flex-direction: column;
+      }
+      &__heading {
+        font-size: 24px;
+      }
+    }
+  }
 }

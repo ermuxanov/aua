@@ -14,5 +14,5 @@ export function food() {
       });
     });
   });
-  gsapAnim([".food__title,.food__text,.food button,.food__class"], 100);
+  gsapAnim([".food__title", ".food__text", ".food button", ".food__class"], 100);
 }

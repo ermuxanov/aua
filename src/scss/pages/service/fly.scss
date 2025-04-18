@@ -51,4 +51,14 @@
       }
     }
   }
+  @media (max-width:768px) {
+    .fly{
+      &__wrapper{
+        flex-direction: column;
+      }
+      &__wrap{
+        width: 100%;
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 export function footer() {
-  const plane = document.querySelector(".footer__plane");
+  const plane = document.querySelector(".footer__plane img");
 
-  gsap.to(".footer__plane", {
+  gsap.to(".footer__plane img", {
     x: `${-(window.innerWidth - plane.offsetWidth) * 0.5}`,
     // xPercent: -150,
     scrollTrigger: {

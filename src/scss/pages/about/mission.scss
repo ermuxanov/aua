@@ -36,4 +36,12 @@
       }
     }
   }
+  @media (max-width: 1366px) {
+    .mission{
+      &__block{
+        height: auto;
+        flex-direction: column-reverse;
+      }
+    }
+  }
 }

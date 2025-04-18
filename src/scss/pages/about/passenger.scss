@@ -108,4 +108,34 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    .passenger{
+      &__top{
+        flex-direction: column-reverse;
+        align-items: center;
+        &-logo{
+          // width: max-content;
+        }
+      }
+      &__heading{
+        font-size: 24px;
+        text-align: center;
+      }
+      &__text{
+        text-align: center;
+      }
+      &__nums{
+        align-items: center;
+        span{
+          font-size: 64px;
+        }
+        p{
+          font-size: 24px;
+        }
+      }
+      &__card{
+        flex-direction: column;
+      }
+    }
+  }
 }

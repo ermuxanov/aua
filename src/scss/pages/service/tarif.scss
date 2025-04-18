@@ -61,4 +61,11 @@
       }
     }
   }
+  @media (max-width: 1200px) {
+    .tarif {
+      &__wrapper {
+        flex-direction: column;
+      }
+    }
+  }
 }

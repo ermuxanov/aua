@@ -15,5 +15,5 @@ export function plane() {
     },
   });
   
-  gsapAnim(".plane__card", 50, 25);
+  gsapAnim(".plane__card-item", 50, 25);
 }

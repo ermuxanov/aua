@@ -40,4 +40,24 @@
       }
     }
   }
+  @media (max-width: 1365px) {
+    .transport-type {
+      &__wrapper {
+        flex-direction: column;
+      }
+      &__wrap {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .transport-type {
+      &__wrap {
+        &-heading {
+          font-size: 16px;
+          text-wrap: auto;
+        }
+      }
+    }
+  }
 }

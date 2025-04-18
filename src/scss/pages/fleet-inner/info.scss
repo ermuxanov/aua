@@ -26,7 +26,6 @@
         display: flex;
       }
       &[data-tab-content="inside"] {
-        height: 875px;
         background: #f6f6f6;
         &.active ~ .info__ghost {
           opacity: 1;
@@ -35,12 +34,19 @@
       }
       &-img {
         transform: translate(-100%, 0);
+        img {
+          width: 100%;
+        }
       }
       &-svg {
+        max-width: 73.8vw;
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
-        right: 103px;
+        right: 5.36vw;
+        svg {
+          width: 100%;
+        }
       }
     }
     &__ghost {
@@ -49,6 +55,8 @@
       left: 0;
       opacity: 0;
       visibility: hidden;
+      width: 100%;
+      height: 100%;
       .tooltip {
         position: absolute;
         top: 0;
@@ -57,13 +65,36 @@
         opacity: 0;
         visibility: hidden;
         transition: 0.2s ease;
+        z-index: 2;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: calc(100% - 30px);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+          border-radius: 15px;
+          z-index: -2;
+        }
+        &::after {
+          background: #fff;
+          content: "";
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          width: 20px;
+          height: 20px;
+          transform: translate(-50%, 50%) rotate(-45deg);
+          z-index: -1;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        }
         &.active {
           opacity: 1;
           visibility: visible;
         }
         &__wrap {
           overflow: hidden;
-          padding-bottom: 30px;
           width: 160px;
           height: auto;
           background: #fff;
@@ -71,12 +102,6 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          svg {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(180deg);
-          }
         }
         &__img {
           img {
@@ -102,6 +127,7 @@
           color: #170826;
           margin-top: 10px;
           text-align: center;
+          padding-bottom: 30px;
           span {
             display: none;
             &.active {
@@ -125,6 +151,36 @@
           max-width: 55%;
           width: 100%;
           color: #707070;
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .info {
+      &__wrapper[data-tab-content="inside"] {
+        display: none;
+      }
+      &__ghost {
+        display: none;
+      }
+      &__inner {
+        .button {
+          &:last-of-type {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .info {
+      &__flex {
+        flex-direction: column;
+        &-item {
+          font-size: 14px;
+          &:first-of-type {
+            max-width: 100%;
+          }
         }
       }
     }

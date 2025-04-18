@@ -41,5 +41,5 @@ export function passenger() {
     },
   });
 
-  gsapAnim([".passenger__nums p", ".passenger__top", ".passenger__text", ".passenger__card"], 100);
+  gsapAnim([".passenger__nums p", ".passenger__top", ".passenger__text", ".passenger__card-item"], 100);
 }

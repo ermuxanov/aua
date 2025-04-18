@@ -12,15 +12,16 @@ import { animalPage } from "./pages/animalPage.js";
 import { servicePage } from "./pages/servicePage.js";
 import { newsPage } from "./pages/newsPage.js";
 import { bagaggeInnerPage } from "./pages/bagaggeInnerPage.js";
+import { vacancyInnerPage } from "./pages/vacancyInnerPage.js";
 
-// if ("scrollRestoration" in history) {
-//   history.scrollRestoration = "manual";
-// }
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
 
 const page = document.body.dataset.page;
 
 window.addEventListener("load", () => {
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
   plugins();
   Swiper.use([Navigation, EffectFade, Autoplay]);
   header();
@@ -52,4 +53,7 @@ window.addEventListener("load", () => {
 
   // bagagge-inner page
   bagaggeInnerPage(page);
+
+  // vacancy-inner page
+  vacancyInnerPage(page);
 });
