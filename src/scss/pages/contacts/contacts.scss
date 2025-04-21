@@ -172,10 +172,10 @@
     z-index: 2;
     overflow: visible;
     .footer__plane {
-      display: none;
       top: var(--pt-plane);
       width: 100%;
       overflow: hidden;
+      display: none;
       img {
         position: relative;
         top: 0;

@@ -23,17 +23,7 @@
       display: flex;
       justify-content: space-between;
       gap: 25px;
-      &-img {
-        width: 245px;
-        img {
-          width: 100%;
-        }
-      }
       &-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 25px;
         padding: 25px;
         border-radius: 25px;
         background: #f6f6f6;
@@ -45,9 +35,14 @@
         }
         &:last-child {
           width: 210px;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
+          .flot__card-link {
+            height: 100%;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
         }
         &:hover {
           background: #6f2db5;
@@ -58,6 +53,15 @@
           svg path {
             fill: #fff;
           }
+        }
+      }
+      &-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 25px;
+        img {
+          width: 245px;
         }
       }
       &-name {
