@@ -172,13 +172,15 @@
     z-index: 2;
     overflow: visible;
     .footer__plane {
+      display: none;
       top: var(--pt-plane);
-      // width: 100%;
+      width: 100%;
+      overflow: hidden;
       img {
-        position: absolute;
+        position: relative;
         top: 0;
         right: 0;
-        // width: 960px;
+        width: 50%;
         transform: translate(100%, 0);
       }
     }
@@ -195,8 +197,8 @@
   }
   @media (max-width: 768px) {
     .contacts {
-      &__form{
-        &-wrap{
+      &__form {
+        &-wrap {
           flex-direction: column;
         }
       }

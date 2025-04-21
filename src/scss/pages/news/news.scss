@@ -190,6 +190,9 @@
           }
         }
       }
+      &__btn{
+        margin-left: 0;
+      }
     }
   }
   @media (max-width: 768px) {
@@ -197,6 +200,9 @@
       &__grid {
         display: flex;
         flex-direction: column;
+        img{
+          height: auto;
+        }
         &-main {
           padding: 0;
           &::before {

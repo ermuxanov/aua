@@ -14,16 +14,16 @@
 body {
   overflow: hidden visible;
   height: auto;
-  // &.no-scroll {
-  //   overflow: hidden;
-  // }
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 ::-webkit-scrollbar {
   display: none;
 }
-* {
-  // outline: 1px solid green;
-}
+// * {
+//   outline: 1px solid green;
+// }
 .container {
   // max-width: 100%;
   max-width: 1480px;
@@ -37,6 +37,9 @@ body {
 }
 section {
   padding-top: 150px;
+  @media (max-width:500px) {
+    padding-top: 50px;
+  }
 }
 .main#main {
   section {

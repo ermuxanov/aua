@@ -144,6 +144,14 @@
         }
       }
     }
+    &__cloud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
   }
   @media (max-width: 1279px) {
     .intro {
@@ -174,7 +182,7 @@
         &-bottom {
           padding-top: 40px;
         }
-        &-navigation{
+        &-navigation {
           display: none;
         }
       }
@@ -189,7 +197,7 @@
       }
       &__block {
         margin-top: 20px;
-        &-left{
+        &-left {
           padding: 20px;
           align-items: center;
         }

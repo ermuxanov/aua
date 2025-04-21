@@ -2,7 +2,8 @@
   .shipping {
     &__block {
       display: flex;
-      gap: 5vw;
+      gap: 20px;
+      height: auto;
     }
     &__heading {
       font-weight: 700;
@@ -58,16 +59,26 @@
       }
     }
   }
-  @media (max-width:1200px) {
-    .shipping{
-      &__block{
+  @media (max-width: 1200px) {
+    .shipping {
+      &__block {
         flex-direction: column;
       }
-      &__desc{
+      &__desc {
         margin-top: 30px;
       }
-      &__right{
+      &__right {
         height: auto;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .shipping {
+      &__right {
+        height: auto;
+        img {
+          height: auto;
+        }
       }
     }
   }

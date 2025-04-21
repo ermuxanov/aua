@@ -39,7 +39,7 @@
             </div>
           </nav>
           <a class="header__phone" href="tel:998555069999">
-            <span class="header__search-svg">@@include('../shared/phone.html')</span>
+            <span class="header__phone-svg">@@include('../shared/phone.html')</span>
             <span class="header__phone-num">+99855 506 99 99</span>
           </a>
           <div class="header__search">
@@ -57,6 +57,42 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="header__burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <div class="header__menu-item-main">
+            <p>О компании</p>
+            @@include('../shared/arrow.html')
+          </div>
+          <ul class="header__menu-item-list">
+            <li><a href="./about.html">Информация о компании</a></li>
+            <li><a href="./fleet.html">Наш флот</a></li>
+            <li><a href="./food.html">Питание на борту</a></li>
+            <li><a href="#">Карта полетов</a></li>
+          </ul>
+        </li>
+        <li class="header__menu-item">
+          <div class="header__menu-item-main">
+            <p>Услуги</p>
+            @@include('../shared/arrow.html')
+          </div>
+          <ul class="header__menu-item-list">
+            <a href="./service.html">Услуги кооторые предоставляет Asia Union Airlines</a>
+            <a href="./tarif-inner.html">Тарифы</a>
+            <a href="./bagagge-inner.html">Багаж</a>
+            <a href="./animal.html">Перевозка животных</a>
+          </ul>
+        </li>
+        <li class="header__menu-item"><a href="./news.html">Новости</a></li>
+        <li class="header__menu-item"><a href="./vacancy.html">Вакансии</a></li>
+        <li class="header__menu-item"><a href="./contacts.html">Контакты</a></li>
+      </ul>
     </div>
     <div class="header__search-input">
       <span>@@include('../shared/search.html')</span>

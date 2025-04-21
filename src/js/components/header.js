@@ -1,4 +1,4 @@
-import { addClassName, removeClasses, removeClassName } from "./utils.js";
+import { addClassName, removeClasses, removeClassName, toggleClassName } from "./utils.js";
 
 export function header() {
   const header = document.querySelector(".header");
@@ -52,7 +52,31 @@ export function header() {
     }
   });
 
-  if (mainPage) {
+  // header menu
+  const menuLinks = document.querySelectorAll(".header__menu a");
+  const menuBurger = document.querySelector(".header__burger");
+  const menuTabs = document.querySelectorAll(".header__menu-item-main");
+
+  menuBurger.addEventListener("click", () => {
+    toggleClassName(menuBurger);
+    toggleClassName(header, "menu-open");
+    toggleClassName(document.body, "no-scroll");
+  });
+  menuTabs.forEach((menuTab) => {
+    menuTab.addEventListener("click", () => {
+      removeClasses(menuTabs);
+      addClassName(menuTab);
+    });
+  });
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      removeClassName(menuBurger);
+      removeClassName(header, "menu-open");
+      removeClasses(menuTabs);
+    });
+  });
+
+  if (mainPage && window.innerWidth > 1279) {
     gsap.to(header, {
       scrollTrigger: {
         trigger: header,
@@ -67,11 +91,10 @@ export function header() {
         },
       },
     });
-  }
+  } else addClassName(header, "white");
 
   // header height
   const root = document.documentElement;
-  
-  root.style.setProperty("--hh", `${header.offsetHeight}px`);
 
+  root.style.setProperty("--hh", `${header.offsetHeight}px`);
 }

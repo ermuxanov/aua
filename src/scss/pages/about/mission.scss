@@ -37,10 +37,20 @@
     }
   }
   @media (max-width: 1366px) {
-    .mission{
-      &__block{
+    .mission {
+      &__block {
         height: auto;
         flex-direction: column-reverse;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .mission {
+      &__right {
+        img {
+          height: auto;
+          object-fit: cover;
+        }
       }
     }
   }
